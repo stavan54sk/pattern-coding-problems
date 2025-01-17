@@ -92,8 +92,50 @@ public class Patterns {
 		}
 
 	}
+	
+	void patterns9(int n) {
+
+		for (int i = 0; i <= n; i++) {
+//			space
+			for (int j = 0; j < (n - i); j++) {
+				System.out.print(" ");
+			}
+//			star
+			for (int j = 1; j <=(2*i+1); j++) {
+				System.out.print("*");
+			}
+//			space
+			for (int j = 1; j < (n - i); j++) {
+				System.out.print(" ");
+			}
+			System.out.println();
+		}
+
+	}
+	
+	void patterns10(int n) {
+
+		for (int i = 0; i <= n; i++) {
+//			space
+			for (int j = 0; j < i; j++) {
+				System.out.print(" ");
+			}
+//			star
+			for (int j = 1; j <=(2*n-(2*i+1)); j++) {
+				System.out.print("*");
+			}
+//			space
+			for (int j = 0; j < i; j++) {
+				System.out.print(" ");
+			}
+			System.out.println();
+		}
+
+	}
+	
+	
 
 	public static void main(String[] args) {
-		new Patterns().patterns8(5);
+		new Patterns().patterns10(5);
 	}
 }
