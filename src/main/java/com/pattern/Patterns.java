@@ -26,7 +26,7 @@ public class Patterns {
 		}
 
 	}
-	
+
 	void patterns3(int n) {
 
 		for (int i = 1; i <= n; i++) {
@@ -37,7 +37,7 @@ public class Patterns {
 		}
 
 	}
-	
+
 	void patterns4(int n) {
 
 		for (int i = 1; i <= n; i++) {
@@ -48,7 +48,7 @@ public class Patterns {
 		}
 
 	}
-	
+
 	void patterns5(int n) {
 
 		for (int i = 1; i <= n; i++) {
@@ -59,33 +59,33 @@ public class Patterns {
 		}
 
 	}
-	
+
 	void patterns6(int n) {
 
 		for (int i = 0; i < n; i++) {
-			for (int j = 0; j <(n-i); j++) {
+			for (int j = 0; j < (n - i); j++) {
 				System.out.print("*");
 			}
 			System.out.println();
 		}
 
 	}
-	
+
 	void patterns7(int n) {
 
 		for (int i = 0; i < n; i++) {
-			for (int j = 0; j <(n-i); j++) {
+			for (int j = 0; j < (n - i); j++) {
 				System.out.print("*");
 			}
 			System.out.println();
 		}
 
 	}
-	
+
 	void patterns8(int n) {
 
 		for (int i = 0; i < n; i++) {
-			for (int j = 1; j <=(n-i); j++) {
+			for (int j = 1; j <= (n - i); j++) {
 				System.out.print(j);
 			}
 			System.out.println();
