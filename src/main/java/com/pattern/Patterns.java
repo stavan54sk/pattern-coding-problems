@@ -161,7 +161,6 @@ public class Patterns {
 	void patterns13(int n) {
 		int v=1;
 		for (int i = 1; i <= n; i++) {
-			//			star
 			for (int j = 1; j <= i; j++) {
 				System.out.print(v);
 				v=1-v;
@@ -170,8 +169,20 @@ public class Patterns {
 		}
 
 	}
+	
+	void patterns14(int n) {
+		int v=1;
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print(v+" ");
+				v++;
+			}
+			System.out.println();
+		}
+
+	}
 
 	public static void main(String[] args) {
-		new Patterns().patterns13(5);
+		new Patterns().patterns14(5);
 	}
 }
