@@ -142,34 +142,36 @@ public class Patterns {
 
 	void patterns12(int n) {
 
-		for (int i = 1; i <= (2 * n)-1; i++) {
+		for (int i = 1; i <= (2 * n) - 1; i++) {
 //			star
 			if (i <= n) {
 				for (int j = 1; j <= i; j++) {
 					System.out.print("*");
 				}
 			} else {
-				for (int j = 1; j <= (n - (i-n)); j++) {
+				for (int j = 1; j <= (n - (i - n)); j++) {
 					System.out.print("*");
 				}
 			}
-//			space
+			System.out.println();
+		}
 
-//			if (i <= n) {
-//				for (int j = 0; j < i; j++) {
-//					System.out.print(" ");
-//				}
-//			} else {
-//				for (int j = 1; j <= (i - n); j++) {
-//					System.out.print("*");
-//				}
-//			}
+	}
+
+	void patterns13(int n) {
+		int v=1;
+		for (int i = 1; i <= n; i++) {
+			//			star
+			for (int j = 1; j <= i; j++) {
+				System.out.print(v);
+				v=1-v;
+			}
 			System.out.println();
 		}
 
 	}
 
 	public static void main(String[] args) {
-		new Patterns().patterns12(5);
+		new Patterns().patterns13(5);
 	}
 }
