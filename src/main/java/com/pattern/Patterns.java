@@ -95,9 +95,9 @@ public class Patterns {
 	
 	void patterns9(int n) {
 
-		for (int i = 0; i <= n; i++) {
+		for (int i = 0; i < n; i++) {
 //			space
-			for (int j = 0; j < (n - i); j++) {
+			for (int j = 0; j < (n - i-1); j++) {
 				System.out.print(" ");
 			}
 //			star
@@ -105,7 +105,7 @@ public class Patterns {
 				System.out.print("*");
 			}
 //			space
-			for (int j = 1; j < (n - i); j++) {
+			for (int j = 1; j < (n - i-1); j++) {
 				System.out.print(" ");
 			}
 			System.out.println();
@@ -133,9 +133,17 @@ public class Patterns {
 
 	}
 	
+	void patterns11(int n) {
+		
+		patterns9(n);
+		patterns10(n);
+
+	}
+	
+	
 	
 
 	public static void main(String[] args) {
-		new Patterns().patterns10(5);
+		new Patterns().patterns11(5);
 	}
 }
