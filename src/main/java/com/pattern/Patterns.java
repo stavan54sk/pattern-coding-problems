@@ -1,5 +1,7 @@
 package com.pattern;
 
+import java.util.Iterator;
+
 /**
  * Hello world!
  *
@@ -259,9 +261,9 @@ public class Patterns {
 	}
 
 	void patterns20(int n) {
-		for (int i = 1; i <= n; i++) {
-			char v = (char) (65 + n - i + 1);
-			for (int j = 1; j <= i; j++) {
+		for (int i = 0; i <= n; i++) {
+			char v = (char) (65 + n - i);
+			for (int j = 0; j <= i; j++) {
 				System.out.print(v);
 				v++;
 			}
@@ -309,11 +311,14 @@ public class Patterns {
 	}
 
 	void patterns22(int n) {
-		for (int i = 1; i <= n; i++) {
-			char v = (char) (65 + n - i + 1);
-			for (int j = 1; j <= i; j++) {
-				System.out.print(v);
-				v++;
+		for (int i = 0; i < n; i++) {
+
+			for (int j = 0; j < n; j++) {
+				if (i == 0 || i == (n - 1) || j == 0 || j == (n - 1)) {
+					System.out.print("* ");
+				} else {
+					System.out.print("  ");
+				}
 			}
 			System.out.println();
 		}
@@ -321,15 +326,38 @@ public class Patterns {
 	}
 
 	void patterns23(int n) {
-		for (int i = 0; i < n; i++) {
-
-			for (int j = 0; j < n; j++) {
-				if (i == 0 || i == (n - 1) || j == 0 || j == (n - 1)) {
+		for (int i = 1; i <= 2 * n; i++) {
+//			star
+			if (i <= n) {
+				for (int j = 1; j <= i; j++) {
 					System.out.print("*");
 				}
-				else {
+			} else {
+				for (int j = 1; j <= 2*n-i; j++) {
+					System.out.print("*");
+				}
+
+			}
+//			space
+			if (i <= n) {
+				for (int j = 1; j <=2*n-2*i; j++) {
 					System.out.print(" ");
 				}
+			} else {
+				for (int j = 1; j <= 2*(i-n); j++) {
+					System.out.print(" ");
+				}
+
+			}
+			if (i <= n) {
+				for (int j = 1; j <= i; j++) {
+					System.out.print("*");
+				}
+			} else {
+				for (int j = 1; j <= 2*n-i; j++) {
+					System.out.print("*");
+				}
+
 			}
 			System.out.println();
 		}
@@ -337,6 +365,6 @@ public class Patterns {
 	}
 
 	public static void main(String[] args) {
-		new Patterns().patterns23(5);
+		new Patterns().patterns23(20);
 	}
 }
