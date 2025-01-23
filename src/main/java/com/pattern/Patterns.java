@@ -333,18 +333,18 @@ public class Patterns {
 					System.out.print("*");
 				}
 			} else {
-				for (int j = 1; j <= 2*n-i; j++) {
+				for (int j = 1; j <= 2 * n - i; j++) {
 					System.out.print("*");
 				}
 
 			}
 //			space
 			if (i <= n) {
-				for (int j = 1; j <=2*n-2*i; j++) {
+				for (int j = 1; j <= 2 * n - 2 * i; j++) {
 					System.out.print(" ");
 				}
 			} else {
-				for (int j = 1; j <= 2*(i-n); j++) {
+				for (int j = 1; j <= 2 * (i - n); j++) {
 					System.out.print(" ");
 				}
 
@@ -354,7 +354,7 @@ public class Patterns {
 					System.out.print("*");
 				}
 			} else {
-				for (int j = 1; j <= 2*n-i; j++) {
+				for (int j = 1; j <= 2 * n - i; j++) {
 					System.out.print("*");
 				}
 
@@ -364,7 +364,22 @@ public class Patterns {
 
 	}
 
+	void patterns24(int n) {
+		for (int i = 1; i < 2 * n; i++) {
+			for (int j = 1; j < 2 * n; j++) {
+				int r = (Math.abs(n - i));
+				int c = (Math.abs(n - j));
+				int mx = Math.max(r, c);
+				int v = (mx + 1);
+				System.out.print(v);
+			}
+			System.out.println();
+
+		}
+	}
+
 	public static void main(String[] args) {
-		new Patterns().patterns23(20);
+		new Patterns().patterns24(5);
+
 	}
 }
